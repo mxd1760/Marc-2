@@ -20,6 +20,22 @@ Project Goals:
 Project Updates:
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Date: 12/06/2020
+
+Done:	Marcus: - I just made the git repository
+	Mark.S: - Has completed a feature allowing the platforms to be generated based on an array of notes.
+	Mark.M: -
+Doing:	Marcus: - I think i'm going to work on trying to get the grappling hook mechanic working so that we can make more considerations for it
+		as we move forward seeing as that was one of our priorities.
+	Mark.S: - Will likely continue work to either make his feature cablable of processing the array into new and interesting
+		types of level geomentry (like slants) or working on implimenting the plugin that will generate the arrays he's using from
+		an external resource as opposed to being hard coded in.
+	Mark.M: - I think he's still working on getting some assets drafted up.
+Goals: We're still working on making a rhythm based platformer however with the git repository set up we can start getting work done on more things
+	at once: namely mechanics can be worked on seperate from level generation wich themselves can be worked on seperatly from the assets and 
+	other visual effects.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 Date: 11/15/2020
 
 Done:	Marcus: - I've reworked my simple platformer to better conform to the vision we were talking about last week
@@ -29,7 +45,7 @@ Doing:	Marcus: - I Think I'll work on getting the godot project integrated into 
 		version of it without haveing to constantly be cunsulting and file sharing.
 	Mark.S: - I'm going to work on finishing up my integration of the logic with the godot project.
 	Mark.M: - I'm going to work on learning godot and/or creating game assets. 
-Goals:	We have something playable, we're now working on adding to it in order to make it into a fun rhythm base platformer. 
+Goals:	We have something playable, we're now working on adding to it in order to make it into a fun rhythm based platformer. 
 --------------------------------------------------------------------------------------------------------------------------------------------
 Date: 11/08/2020
 
