@@ -1,0 +1,206 @@
+Let's make a Game!
+
+We Meet on Sundays at 4:00 Pm
+We use Unity for the Game Dev Stuff
+We Use Blender for the Modeling/Animation stuff (.fbx is the format used for files)
+
+Team Roles:
+	Marcus: Guy A
+	Mark.M: Guy 1
+	Mark.S: Guy 1st
+	
+
+Project Goals:
+	Setup: (get a system working)
+	Brainstorming: (What kind of game do we want?)
+	Make A Prototype: (Unclear)
+		RPG:
+			
+============================================================================================================================================
+Project Updates:
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 11/15/2020
+
+Done:	Marcus: - I've reworked my simple platformer to better conform to the vision we were talking about last week
+	Mark.S: - Took the reworked simple platformer and worked on adding new logic for generating platforms based on music.
+	Mark.M: - I worked on more brainstorming
+Doing:	Marcus: - I Think I'll work on getting the godot project integrated into a git repository (probably this one) so that we can all work on an up to date 
+		version of it without haveing to constantly be cunsulting and file sharing.
+	Mark.S: - I'm going to work on finishing up my integration of the logic with the godot project.
+	Mark.M: - I'm going to work on learning godot and/or creating game assets. 
+Goals:	We have something playable, we're now working on adding to it in order to make it into a fun rhythm base platformer. 
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 11/08/2020
+
+Done:	Marcus: - I've made a demo platformer in godot
+	Mark.S: - I've brainstormed about how we might be able to make our platformer work as a rhythm game
+	Mark.M: - I've been brainstorming about mechanics that might help make our platformer more mechanichally engaging. 
+Doing:	Marcus: - I think I'm going to try and work to retool my platformer into a more sidescroller type version that can then support the 
+		new mechanical ideas a bit better.
+	Mark.S: - I'm going to be working on the systems that would be used to impliment the rhythm game aspects into the game.
+	Mark.M: - I'm going to work on theming ideas and assets for the game.
+Goals:  - I think next week we'll want to have improved on our prototypes and such. I think it would also behoove us to have a better idea as
+	to how we're going to retool this git repository in order to share our new godot based project as opposed to the old unity stuff. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date 10/04/2020
+
+Done:	Marcus: - I've been going extremely slowly in past weeks compared to before then with the character designs due to other life things.
+	Mark.S: - 
+	Mark.M: - 
+Doing:	Marcus: - I'm planning to try and foce myself to just do work more often even if it's less quality, more work will mean things will get done
+		with enough time at the end to fix the things that need to be done better.
+	Mark.S: - 
+	Mark.M: - 
+Goals:	 - A prototype was our first goal but we still haven't reached it. I think we should reconsider what our goals actually are and how we plan to 
+	achieve them. If nothing else This first few months might have been enough to get our toes wet enough to know what we need going in for round 2. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 08/16/2020
+
+Done:	Marcus: - I've kinda been slacking on the charachter design practice. I've also been learning about a different game engine for work but when
+		I'm done with that I can focus on the 3D modeling stuff because it will be useful for both this project and my godot work for work.
+	Mark.S: - 
+	Mark.M: - Trying to work on the story and setting for the intro.
+Doing:	Marcus: - I'm hoping to finish my godot learning and then just crap out a couple of charachters to use.
+	Mark.S: - 
+	Mark.M: - Mark hopes to finish up with his starting area stuff. 
+Goals:	We might need to Reconvine in the near future to try and reorient ourselves. I think that trying to focus on a short demo instead of a full game to start
+	with will help us feel out our roles a bit better without being so hesitant due to uncertanty. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date; 07/26/2020
+
+Done:	Marcus: - Since last time i've been working on learning how to make characters
+	Mark.S: - Since last time mark has been working more onthe game engine.
+	Mark.M:
+Doing:	Marcus:	- This week I hope to continue with the character stuff as well as maybe do some side work to help mark get a demo up.
+	Mark.S: - Mark plans to continue working toward getting a functional demo up and running.
+	Mark.M: - Presumably he's still working on some lore type things. 
+Goals:		Get a Demo up and running and be prepared to get full into preproduction/production.
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 06/14/2020
+
+Done:	Marcus: - Last week I added some new camera stuff.
+	Mark.s:	- 
+	Mark.m: -
+Doing:	Marcus:	- This week I expect to start working on some basic charachter assets.
+	Mark.S: - 
+	Mark.m: - 
+Goals:		We're starting to work on building up some charachters and story. This will let us experience our game a bit more 
+	and that will facilitate meaningful iteration on our work. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 06/07/2020
+
+Done:	Marcus: - Last week I finished the first draft of the Jungle Area. (though without treetops it looks a bit deforested)
+	Mark.s: - 
+	Mark.m: - 
+Doing:	Marcus: - This week I hope wot work on more relevant assets acording to what everyon else has gotten done. 
+	Mark.S:
+	Mark.M:
+Goals:		Get Some Basic Gameplay features implimented to facilitate more accurate planning for upcoming months.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 05/31/2020
+
+Done:	Marcus: - 
+	Mark.S: - Continued work on talk system for movement 
+	Mark.M:
+Doing:	Marcus:	- 
+	Mark.S: - Will work on making the talk system work for combat
+	Mark.M:
+Goals:		Get some gameply to put into the level to start feeling things out.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 04/26/2020
+
+Done:	Marcus: - Basically nothing. took the week off.
+	Mark.S: - Not too much either, did another design doc
+	Mark.M:
+Doing:	Marcus:	- I'm going to focus on adding more content to the levels.
+	Mark.S; - Come up with more elements that should be implemented at some point
+	Mark.M:
+Goals:		Get some gameply to put into the level to start feeling things out.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 04/19/2020
+
+Done:	Marcus:  - Finsihed a building in unity using the prefabs, prefabed that building, and plopped some around a small section of 
+		the first level.
+	Mark.S: - Did more work on dialouge system and deciding how to proceed with game
+	Mark.M:
+Doing:	Marcus:	 - This Week I hope to try and feel out some different methods of modeling some prefabs to get into unity to get the
+		assets into the game easyer and faster. 
+	Mark.S:
+	Mark.M:
+Goals:		Get A level Playable. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 04/12/2020
+
+Done: 	Marcus: Finished some preliminary prefabs
+	Mark.S:
+	Mark.M:
+Doing: 	Marcus: Either Create New Prefab set or Use/refine current one to build out some areas
+	Mark.S:
+	Mark.M:
+Goals: 		Get a level Playable
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 03/29/2020
+
+Done:	Marcus: Finished the terrain for a new level
+	Mark.S: Made basic dialog system test, made game doc outline
+	Mark.M:
+Doing:	Marcus: Create A terrain for a Beach Level (start of the Game)
+	Mark.S: Continue work on dialog system
+	Mark.M: 
+Goals:		Get a level Playable
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 03/22/2020
+
+Done:		We have done more Game Design Planning arouund a dialog system as well as some basic enviornmental design.
+Doing:	Marcus: Continue with enviornment design.
+	Mark.s: Impliment a simple dialog system. 
+	Mark.m: Lore and game design (writing) 
+Goals: 		Get the first level playable.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 03/15/2020
+
+Done: 		Have implimented a WIP game with some placeholders to add features to.
+Doing:	Marcus: Do Some Story/ Enviornment design
+	Mark.S: More planning for Dialog system.
+	Mark.M: ???
+Goals:		Fill out the prototype into something a bit more engaging, more like a demo instead of a proof of concept.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 03/01/2020
+
+Done:		Continued with Setup of Project Pipeline
+Doing:	Marcus:	Get Adventure Kid Animating In Game
+	Mark.S:	Develop menuing system outline 
+	Mark.M: Do Something. Lore?
+Goals:		Get A playable prototype by the end of March
+	
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 02/23/2020
+
+Done:		Worked on Building work flow pipeline and decided on a simple project
+Doing:		Build a prototype
+Goals:		Get Something Working by end of month
+	Marcus: 
+	Mark.s: Do Some design stuff
+	Mark.M:
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Date: 02/16/2020
+
+Done: 		Started Stuff
+Doing:		Have some kind of Plan (enough to start working on things) by next Sunday
+Goals:		Get Something Working By the end of the month.
+	Marcus: Have a method for Sharing 3D Files between both Unity, Blender and Git.
+	Mark.S: Getting Unity files To work with Git, Decide on a genre.
+	
