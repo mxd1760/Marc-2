@@ -1,27 +1,28 @@
 extends Node2D
 
 # Constant variables
-var SPAWN_POSITION = Vector2(400,300)
-var SPAWN_VEL = Vector2(0,-20)
-var GRAVITY = Vector2(0,100)
-var JUMP = Vector2(0,-1300)
-var ACC_FALL = Vector2(0,100)
-var GROUND_SPEED_FWD = Vector2(600,0)
-var AIR_SPEED_FWD = Vector2(500,0)
-var GROUND_SPEED_BWD = Vector2(800,0)
-var AIR_SPEED_BWD = Vector2(700,0)
-var UP = Vector2(0,-1)
-var VEL_TERMINAL = 1600
-var SCREEN_BOTTOM = 700
-var CHANCE_TIME = 0.1
-var GRAPPLE_STORAGE_POSITION = Vector2(150,-150)
-var GRAPPLE_VELOCITY = Vector2(1000,-750) # for the grapple when flying through the air
-var GRAPPLED_VELOCITY = Vector2(-700,-10) # for when the grapple is attached to a wall (the x should probably match up with plaftorm speed)
-var GRAPPLE_LAUNCH_OFFSET = Vector2(0,0)#Vector2(50,-50)
+export var SPAWN_POSITION = Vector2(400,300)
+export var SPAWN_VEL = Vector2(0,-20)
+export var GRAVITY = Vector2(0,100)
+export var JUMP = Vector2(0,-1300)
+export var ACC_FALL = Vector2(0,100)
+export var GROUND_SPEED_FWD = Vector2(600,0)
+export var AIR_SPEED_FWD = Vector2(500,0)
+export var GROUND_SPEED_BWD = Vector2(800,0)
+export var AIR_SPEED_BWD = Vector2(700,0)
+export var UP = Vector2(0,-1)
+export var VEL_TERMINAL = 1600
+export var SCREEN_BOTTOM = 700
+export var CHANCE_TIME = 0.1
+export var GRAPPLE_STORAGE_POSITION = Vector2(150,-150)
+export var GRAPPLE_VELOCITY = Vector2(1250,-1000) # for the grapple when flying through the air
+export var GRAPPLED_VELOCITY = Vector2(-700,-10) # for when the grapple is attached to a wall (the x should probably match up with plaftorm speed)
+export var GRAPPLE_LAUNCH_OFFSET = Vector2(0,0)#Vector2(50,-50)
+export var STORED_JUMPS = 2
 
 # Member variables
 var move_vector = Vector2(0,0)
-var jumps = 2
+var jumps = STORED_JUMPS
 var deaths = 0
 var grappling = false
 var grappled = false
@@ -100,7 +101,7 @@ func _physics_process(delta):
 			if $Grapple.is_on_wall():
 				grapple_vector = GRAPPLED_VELOCITY
 				grappled = true
-				grapple_radius = ($Grapple.position - $Body.position).abs()
+				#grapple_radius = ($Grapple.position - $Body.position).abs() # hopefully can end up helping with the strange drift at some point.
 			else:
 				grapple_vector = GRAPPLE_VELOCITY
 		else:
@@ -110,12 +111,14 @@ func _physics_process(delta):
 			grapple_offset = $Grapple.position - $Body.position
 			if grapple_offset.normalized().dot(move_vector) < 0:
 				move_vector -= grapple_offset.normalized()*grapple_offset.normalized().dot(move_vector)
-	$Debug.text = "Grapple Offset = " + str(grapple_offset) + ", Move Vector = " + str(move_vector)
+	#$Debug.text = "Grapple Offset = " + str(grapple_offset) + ", Move Vector = " + str(move_vector)
 	
 	
 	# Calculate Velocities
 	$Body.move_and_slide(move_vector,UP)
 	$Grapple.move_and_slide(grapple_vector)
+	
+	
 	
 	
 	# Check if off screen
@@ -136,7 +139,7 @@ func on_death():
 	set_jumps()
 	
 func set_jumps():
-	jumps = 2
+	jumps = STORED_JUMPS
 
 func display_labels():
 	$Deaths.text = "Deaths = " + str(deaths)
