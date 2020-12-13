@@ -20,6 +20,18 @@ Project Goals:
 Project Updates:
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Date: 12/13/2020
+
+Done:	Marcus: - I added a grapple feature
+	Mark.S: - Polished his generator stuff
+	Mark.M: - 
+Doing:	Marcus: - Look into making a menu or something.
+	Mark.S: - Working on getting an actual somg working. 
+	Mark.M: - Learning more about godot and making assets.
+Goals: I think that our current goal is to get the game into its MVP state with the music implimented to a passing quality, a menu or other wrapper
+	applied to the game to help the user control their experience as well as some simple assets to make it look less like a pre-alpha demo.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 Date: 12/06/2020
 
 Done:	Marcus: - I just made the git repository
