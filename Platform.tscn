@@ -6,6 +6,8 @@
 extents = Vector2( 124, 10 )
 
 [node name="Platform" type="StaticBody2D"]
+show_behind_parent = true
+light_mask = 16
 position = Vector2( -0.254518, -1.65392 )
 scale = Vector2( 1.06879, 1.37401 )
 

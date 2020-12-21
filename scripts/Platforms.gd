@@ -5,6 +5,8 @@ export (PackedScene) var Platform
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+var phys_paused = false
+
 var PLATFORM_SPEED = 700
 var PLATFORM_SPAWN_X = 1500
 var PLATFORM_DESPAWN_X = -500
@@ -29,11 +31,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	# manage existing platforms
-	for i in get_children():
-		i.position.x -= PLATFORM_SPEED*delta
-		if i.position.x < PLATFORM_DESPAWN_X:
-			i.queue_free()
+	set_paused(phys_paused)
+	if not paused:
+		# manage existing platforms
+		for i in get_children():
+			i.position.x -= PLATFORM_SPEED*delta
+			if i.position.x < PLATFORM_DESPAWN_X:
+				i.queue_free()
+		
 
 
 func _on_Platforms_timeout():
