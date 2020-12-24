@@ -6,12 +6,13 @@ extends Node2D
 # var b = "text"
 var GAME_OVER_MENU
 var PAUSE_MENU
+var DEMO_PARENT =  "Title Screen"
 
 var paused = false
 var demo = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if get_parent() != null:
+	if get_parent().name == DEMO_PARENT:
 		demo = true
 	else:
 		demo = false
