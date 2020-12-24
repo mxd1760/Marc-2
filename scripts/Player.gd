@@ -29,9 +29,9 @@ var grappling = false
 var grappled = false
 var grapple_vector = Vector2(0,0)
 var grapple_offset = Vector2(0,0)
-var move_vector2 = Vector2(0,0)
 var grapple_radius = 0
 var phys_paused = false
+var demo = false
 
 # Signals
 signal Game_Over
@@ -60,43 +60,39 @@ func _physics_process(delta):
 		move_vector += GRAVITY
 		
 		# Read directional movement inputs
-		if Input.is_action_just_pressed("ui_up"):
-			if jumps >0:
-				move_vector=JUMP
-				jumps-=1
-			pass
-		if Input.is_action_pressed("ui_down"):
-			if $Body.is_on_floor():
-				Crouch()
-			else:
-				move_vector+= ACC_FALL
-			pass
-		move_vector.x = 0 #no compounding horizontal velocity.
-		if Input.is_action_pressed("ui_left"):
-			if $Body.is_on_floor():
-				move_vector-=GROUND_SPEED_BWD
-			else:
-				move_vector-=AIR_SPEED_BWD
-			pass
-		if Input.is_action_pressed("ui_right"):
-			if $Body.is_on_floor():
-				move_vector+=GROUND_SPEED_FWD
-			else:
-				move_vector+=AIR_SPEED_FWD
-			pass
-		if move_vector.y>VEL_TERMINAL:
-			move_vector.y = VEL_TERMINAL
-		elif move_vector.y < -VEL_TERMINAL:
-			move_vector.y = -VEL_TERMINAL
-		move_vector2 = move_vector
-		
-		
-		# Read Grapple Inputs
-		if Input.is_action_just_pressed("grapple") and !grappling:
-			grappling = true
-			grappled = false
-			$Grapple.position = $Body.position + GRAPPLE_LAUNCH_OFFSET
-			$Grapple.move_and_slide(Vector2(0,0))
+		if demo:
+			pass	# Todo: Demo playeback
+		else:
+			if Input.is_action_just_pressed("ui_up"):
+				if jumps >0:
+					move_vector=JUMP
+					jumps-=1
+				pass
+			if Input.is_action_pressed("ui_down"):
+				if $Body.is_on_floor():
+					Crouch()
+				else:
+					move_vector+= ACC_FALL
+				pass
+			move_vector.x = 0 #no compounding horizontal velocity.
+			if Input.is_action_pressed("ui_left"):
+				if $Body.is_on_floor():
+					move_vector-=GROUND_SPEED_BWD
+				else:
+					move_vector-=AIR_SPEED_BWD
+				pass
+			if Input.is_action_pressed("ui_right"):
+				if $Body.is_on_floor():
+					move_vector+=GROUND_SPEED_FWD
+				else:
+					move_vector+=AIR_SPEED_FWD
+
+			# Read Grapple Inputs
+			if Input.is_action_just_pressed("grapple") and !grappling:
+				grappling = true
+				grappled = false
+				$Grapple.position = $Body.position + GRAPPLE_LAUNCH_OFFSET
+				$Grapple.move_and_slide(Vector2(0,0))
 		
 		# Process grapple logic
 		if grappling:
@@ -118,7 +114,11 @@ func _physics_process(delta):
 					move_vector -= grapple_offset.normalized()*grapple_offset.normalized().dot(move_vector)
 		#$Debug.text = "Grapple Offset = " + str(grapple_offset) + ", Move Vector = " + str(move_vector)
 		
-		# Calculate Velocities
+		# Apply Velocities
+		if move_vector.y>VEL_TERMINAL:
+			move_vector.y = VEL_TERMINAL
+		elif move_vector.y < -VEL_TERMINAL:
+			move_vector.y = -VEL_TERMINAL
 		$Body.move_and_slide(move_vector,UP)
 		$Grapple.move_and_slide(grapple_vector)
 		
