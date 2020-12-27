@@ -24,50 +24,55 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 100.0
 margin_top = 50.0
-margin_right = 924.0
+margin_right = 1294.0
 margin_bottom = 550.0
 custom_constants/separation = 400
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_right = 824.0
+margin_right = 1194.0
 margin_bottom = 48.0
 custom_fonts/font = SubResource( 1 )
 text = "Game Paused"
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
 margin_top = 448.0
-margin_right = 824.0
+margin_right = 1194.0
 margin_bottom = 490.0
 custom_constants/margin_right = 130
-custom_constants/margin_left = 130
+custom_constants/margin_left = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer"]
-margin_left = 130.0
-margin_right = 694.0
+margin_right = 1064.0
 margin_bottom = 42.0
-custom_constants/separation = 108
-alignment = 1
-
-[node name="Restart Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
-margin_left = 3.0
-margin_right = 121.0
-margin_bottom = 42.0
-custom_fonts/font = ExtResource( 2 )
-text = "Restart"
+custom_constants/separation = 50
 
 [node name="Continue Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
-margin_left = 229.0
-margin_right = 376.0
+margin_right = 147.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 2 )
 text = "Continue"
 
-[node name="Quit Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
-margin_left = 484.0
-margin_right = 560.0
+[node name="Restart Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 197.0
+margin_right = 315.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 2 )
-text = "Quit"
-[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Restart Button" to="." method="_on_Restart_Button_pressed"]
+text = "Restart"
+
+[node name="Quit to Title Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 365.0
+margin_right = 561.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 2 )
+text = "Quit To Title"
+
+[node name="Quit to Desktop Button" type="Button" parent="VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 611.0
+margin_right = 865.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 2 )
+text = "Quit To Desktop"
 [connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Continue Button" to="." method="_on_Continue_Button_pressed"]
-[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Quit Button" to="." method="_on_Quit_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Restart Button" to="." method="_on_Restart_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Quit to Title Button" to="." method="_on_Quit_to_Title_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/HBoxContainer/Quit to Desktop Button" to="." method="_on_Quit_Button_pressed"]

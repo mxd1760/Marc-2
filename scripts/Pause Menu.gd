@@ -30,3 +30,8 @@ func _on_Quit_Button_pressed():
 func _on_Restart_Button_pressed():
 	get_tree().change_scene("res://Game Scene.tscn")
 	pass # Replace with function body.
+
+
+func _on_Quit_to_Title_Button_pressed():
+	get_tree().change_scene("res://Title Screen.tscn")
+	pass # Replace with function body.

@@ -145,8 +145,12 @@ func set_jumps():
 	jumps = STORED_JUMPS
 
 func display_labels():
-	$Deaths.text = "Deaths = " + str(deaths)
-	$Jumps.text = "Jumps = " + str(jumps)
+	if demo:
+		$Deaths.hide()
+		$Jumps.hide()
+	else:
+		$Deaths.text = "Deaths = " + str(deaths)
+		$Jumps.text = "Jumps = " + str(jumps)
 
 func reset_grapple():
 	grappling = false
