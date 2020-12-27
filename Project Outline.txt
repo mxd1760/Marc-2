@@ -20,6 +20,17 @@ Project Goals:
 Project Updates:
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+DatE: 12/27/2020
+
+Done:	Marcus: - I added some menus and stuff
+	Mark.S: - Iterated on song parsing code and added a song to parse
+	Mark.M: - 
+Doing:	Marucs: - I'm going to try and fix the bug where the spawned platforms go above the menu as well as adding a song select menu
+	Mark.S: - look into moving the camera and adding more songs
+	Mark.M: - More assets or something??
+Goals: Fix a couple bugs, add a couple of songs, and get some art in to get the game presentable.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 Date: 12/13/2020
 
 Done:	Marcus: - I added a grapple feature
