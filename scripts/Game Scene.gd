@@ -44,3 +44,6 @@ func pause_game():
 		PAUSE_MENU = preload("res://Pause Menu.tscn").instance()
 		add_child(PAUSE_MENU)
 		paused = true
+		
+		
+		

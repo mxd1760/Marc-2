@@ -14,6 +14,10 @@ autostart = true
 script = ExtResource( 3 )
 Platform = ExtResource( 2 )
 
+[node name="Plats" type="Node2D" parent="Platforms"]
+light_mask = 8
+z_index = -5
+
 [node name="Right wall" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1053.6, 251.377 )
 scale = Vector2( -0.186732, 35.6562 )
