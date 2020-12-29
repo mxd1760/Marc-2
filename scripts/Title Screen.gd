@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_Play_Button_pressed():
-	get_tree().change_scene("res://Game Scene.tscn")
+	get_tree().change_scene("res://Song Select.tscn")
 	pass # Replace with function body.
 
 
