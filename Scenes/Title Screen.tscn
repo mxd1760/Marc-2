@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/fonts/BOOKOS.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Title Screen.gd" type="Script" id=2]
-[ext_resource path="res://Game Scene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Game Scene.tscn" type="PackedScene" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
