@@ -2,9 +2,7 @@ extends Timer
 
 export (PackedScene) var Platform
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 var phys_paused = false
 
 var PLATFORM_SPEED = 700
@@ -20,10 +18,13 @@ var NOTES = ["A", "B", "C", "C", "B", "A", "C"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# init Platform Timer
 	if USE_PROGRAM_WAIT_TIME:
 		wait_time = PROGRAM_WAIT_TIME
+		
+	# Spawn Starting Platform
 	var platform = Platform.instance()
-	add_child(platform)
+	$Plats.add_child(platform)
 	platform.position = Vector2(500,400)
 	platform.scale *= STARTING_PLATFORM_SCALE
 	pass # Replace with function body.
@@ -34,7 +35,7 @@ func _physics_process(delta):
 	set_paused(phys_paused)
 	if not paused:
 		# manage existing platforms
-		for i in get_children():
+		for i in $Plats.get_children():
 			i.position.x -= PLATFORM_SPEED*delta
 			if i.position.x < PLATFORM_DESPAWN_X:
 				i.queue_free()
@@ -43,7 +44,7 @@ func _physics_process(delta):
 
 func _on_Platforms_timeout():
 	var platform = Platform.instance()
-	add_child(platform)
+	$Plats.add_child(platform)
 	platform.position.x = PLATFORM_SPAWN_X
 	match(NOTES):
 		"A":

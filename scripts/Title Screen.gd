@@ -1,9 +1,7 @@
 extends MarginContainer
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var SONG_SELECT = "res://Scenes//Song Select.tscn"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,7 +15,7 @@ func _ready():
 
 
 func _on_Play_Button_pressed():
-	get_tree().change_scene("res://Game Scene.tscn")
+	get_tree().change_scene(SONG_SELECT)
 	pass # Replace with function body.
 
 
