@@ -20,6 +20,19 @@ Project Goals:
 Project Updates:
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Date: 01/03/2020
+
+Done:	Marcus: - I fixed a couple of bugs and added a new menu
+	Mark.S: - Did a bit more refining of the platform generation
+	Mark.M: - Worked on Learning more about godot
+Doing:	Marcus: - Get audio playing (with mark's audio files) and get the level to load with song and level data.
+		- Grapple improvements maybe??
+		- Look into multiplayer.
+	Mark.S: - Campaign level outline
+	Mark.M: - Work on animations
+Goals:  Finish of the prototype and start an outline for a campaign.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 DatE: 12/27/2020
 
 Done:	Marcus: - I added some menus and stuff
