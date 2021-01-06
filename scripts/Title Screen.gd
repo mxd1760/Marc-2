@@ -1,9 +1,6 @@
 extends MarginContainer
 
-
-var SONG_SELECT = "res://Scenes//Song Select.tscn"
-
-
+signal Load_Song_Select
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,7 +12,8 @@ func _ready():
 
 
 func _on_Play_Button_pressed():
-	get_tree().change_scene(SONG_SELECT)
+	emit_signal("Load_Song_Select")
+	queue_free()
 	pass # Replace with function body.
 
 

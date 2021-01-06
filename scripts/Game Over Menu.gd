@@ -1,8 +1,8 @@
 extends MarginContainer
 
 
-var GAME_SCENE = "res://Scenes//Game Scene.tscn"
-var MAIN_MENU = "res://Scenes//Title Screen.tscn"
+signal Load_Main_Menu
+signal Restart
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,12 +15,12 @@ func _ready():
 
 
 func _on_Play_Button_pressed():
-	get_tree().change_scene(GAME_SCENE)
+	emit_signal("Restart")
 	pass # Replace with function body.
 
 
 func _on_Back_Button_pressed():
-	get_tree().change_scene(MAIN_MENU)
+	emit_signal("Load_Main_Menu")
 	pass # Replace with function body.
 
 
