@@ -1,13 +1,7 @@
 extends MarginContainer
 
 
-signal Load_Main_Menu
-signal Restart
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var CurrentSong
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,10 +22,10 @@ func _on_Quit_Button_pressed():
 
 
 func _on_Restart_Button_pressed():
-	emit_signal("Restart")
+	get_tree().call_group("Loader","Load_Game",CurrentSong)
 	pass # Replace with function body.
 
 
 func _on_Quit_to_Title_Button_pressed():
-	emit_signal("Load_Main_Menu")
+	get_tree().call_group("Loader","Load_Main_Menu")
 	pass # Replace with function body.

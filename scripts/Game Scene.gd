@@ -35,13 +35,19 @@ func _process(delta):
 
 func _on_Player_Game_Over():
 	if !demo:
-		add_child(GAME_OVER_MENU.instance())
+		var menu = GAME_OVER_MENU.instance()
+		menu.CurrentSong = $Music.stream
+		add_child(menu)
 		paused = true
 	
 func pause_game():
 	if !demo:
-		add_child(PAUSE_MENU.instance())
+		var menu = PAUSE_MENU.instance()
+		menu.CurrentSong = $Music.stream
+		add_child(menu)
 		paused = true
 		
-		
-		
+func set_song(song):
+	$Music.stop()
+	$Music.set_stream(song)
+	$Music.play()
