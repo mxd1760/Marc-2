@@ -4,7 +4,6 @@
 [ext_resource path="res://assets/fonts/BOOKOS.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/fonts/Menu Button.tres" type="DynamicFont" id=3]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 60
 font_data = ExtResource( 2 )
@@ -35,24 +34,18 @@ margin_bottom = 204.0
 split_offset = 650
 dragger_visibility = 1
 
-[node name="Levels" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_right = 806.0
+[node name="Songs" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 650.0
 margin_bottom = 129.0
 
-[node name="CheckButton" type="CheckBox" parent="VBoxContainer/HBoxContainer/Levels"]
-margin_right = 806.0
-margin_bottom = 44.0
-custom_fonts/font = ExtResource( 3 )
-text = "Example Level"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_left = 818.0
+margin_left = 662.0
 margin_right = 1024.0
 margin_bottom = 129.0
 custom_constants/separation = 45
 
 [node name="Play Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_right = 206.0
+margin_right = 362.0
 margin_bottom = 42.0
 custom_fonts/font = ExtResource( 3 )
 text = "Play"
@@ -60,7 +53,7 @@ align = 2
 
 [node name="Back Button" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 87.0
-margin_right = 206.0
+margin_right = 362.0
 margin_bottom = 129.0
 custom_fonts/font = ExtResource( 3 )
 text = "Back To Title"

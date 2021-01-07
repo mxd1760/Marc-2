@@ -41,5 +41,7 @@ collision_layer = 5
 [node name="Player" parent="." instance=ExtResource( 1 )]
 light_mask = 16
 position = Vector2( 4.77866, 9.04984 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
 [connection signal="timeout" from="Platforms" to="Platforms" method="_on_Platforms_timeout"]
 [connection signal="Game_Over" from="Player" to="." method="_on_Player_Game_Over"]
