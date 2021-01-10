@@ -1,0 +1,21 @@
+Scope of the Game:
+A rhythm/music platformer. 
+Stages move from left to right and up and down.
+Players must use their skill and a variety of tools, such 
+as a grapple hook, in order to make it to the end of the stage.
+Checkpoints along the way that a player returns to after death. 
+Potential features include: story mode, multiplayer, leaderboards,
+free play, practice mode, stage builder, cosmetics, diffulcty settings. 
+
+
+-Story Mode: 
+X number of songs in a set order, but branching paths. 
+Songs get progressively more difficult as you progress.
+Some tutorial stages meant to ease players into different mechanics.
+"Worlds" of some sort, with each world having a different musical
+genre as the theme, such as rock, jazz, or pop. 
+Enemies and boss fights throughout the story with the player needing
+to figure out the key to defeating the boss. Enemies are weaker and
+serve mainly as small obstacles within the stage. 
+Story possibly deals with a person who is unappreciative of music, 
+but learning throughout the story how to appreciate it more.
