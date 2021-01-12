@@ -21,10 +21,6 @@ func Load_Game(song = DEFAULT_SONG):
 	add_child(game)
 	
 
-	
-
-	
-
 func Load_Main_Menu():
 	for i in get_children():
 		i.queue_free()
