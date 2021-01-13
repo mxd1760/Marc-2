@@ -22,3 +22,9 @@ func _on_Play_Button_pressed():
 func _on_Quit_Button_pressed():
 	get_tree().quit()
 	pass # Replace with function body.
+
+
+func _on_Options_Button_pressed():
+	get_tree().call_group("Loader","Load_Options")
+	queue_free()
+	pass # Replace with function body.

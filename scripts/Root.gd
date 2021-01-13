@@ -3,6 +3,7 @@ extends Node
 const GAME_SCENE = preload("res://Scenes//Game Scene.tscn")
 const MAIN_MENU = preload("res://Scenes//Title Screen.tscn")
 const SONG_SELECT = preload("res://Scenes//Song Select.tscn")
+const OPTIONS = preload("res://Scenes//Options.tscn")
 
 const DEFAULT_SONG = "res://assets/songs/Test Song 2- Overworld.wav"
 
@@ -30,3 +31,8 @@ func Load_Song_Select():
 	for i in get_children():
 		i.queue_free()
 	add_child(SONG_SELECT.instance())
+
+func Load_Options():
+	for i in get_children():
+		i.queue_free()
+	add_child(OPTIONS.instance())

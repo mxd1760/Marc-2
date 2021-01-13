@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/fonts/BOOKOS.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/Title Screen.gd" type="Script" id=2]
@@ -9,10 +9,14 @@ size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 40
+size = 59
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 30
 font_data = ExtResource( 1 )
 
@@ -37,7 +41,7 @@ margin_right = 1004.0
 margin_bottom = 580.0
 grow_horizontal = 2
 grow_vertical = 2
-custom_constants/separation = 279
+custom_constants/separation = 250
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 margin_right = 254.0
@@ -46,27 +50,37 @@ custom_fonts/font = SubResource( 1 )
 text = "Title"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
-margin_top = 339.0
+margin_top = 310.0
 margin_right = 254.0
-margin_bottom = 435.0
+margin_bottom = 470.0
 custom_constants/separation = 0
 
 [node name="Play Button" type="Button" parent="VBoxContainer/VBoxContainer"]
 margin_right = 254.0
-margin_bottom = 54.0
+margin_bottom = 76.0
 custom_fonts/font = SubResource( 2 )
 custom_constants/hseparation = 0
 text = "Play"
 flat = true
 align = 2
 
-[node name="Quit Button" type="Button" parent="VBoxContainer/VBoxContainer"]
-margin_top = 54.0
+[node name="Options Button" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_top = 76.0
 margin_right = 254.0
-margin_bottom = 96.0
+margin_bottom = 118.0
 custom_fonts/font = SubResource( 3 )
+text = "Options"
+flat = true
+align = 2
+
+[node name="Quit Button" type="Button" parent="VBoxContainer/VBoxContainer"]
+margin_top = 118.0
+margin_right = 254.0
+margin_bottom = 160.0
+custom_fonts/font = SubResource( 4 )
 text = "Quit"
 flat = true
 align = 2
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Play Button" to="." method="_on_Play_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/VBoxContainer/Options Button" to="." method="_on_Options_Button_pressed"]
 [connection signal="pressed" from="VBoxContainer/VBoxContainer/Quit Button" to="." method="_on_Quit_Button_pressed"]
