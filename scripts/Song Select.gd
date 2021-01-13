@@ -1,6 +1,6 @@
 extends MarginContainer
 
-
+var SONG_SELECT_MUSIC = preload("res://assets//songs//Test Song 1- Stereo Madness.wav")
 
 var SONG_DIR = "res://assets//songs"
 var GAME_SCENE = "res://Scenes//Game Scene.tscn"
@@ -9,6 +9,8 @@ var MAIN_MENU = "res://Scenes//Title Screen.tscn"
 
 var SSButtons
 var songs
+var selected_song
+
 
 # function overrides
 func _ready():
@@ -25,9 +27,18 @@ func _ready():
 		dir[button] = SONG_DIR + "//" + song
 		if fst:
 			button.pressed = true
+			selected_song = dir[button]
+			$AudioStreamPlayer.set_stream(load(selected_song))
+			$AudioStreamPlayer.play()
 	songs = dir
+	
 
-
+func _process(delta):
+	var temp = get_selected_song()
+	if temp != selected_song:
+		selected_song = temp
+		$AudioStreamPlayer.set_stream(load(selected_song))
+		$AudioStreamPlayer.play()
 
 # signal handlers
 func _on_Play_Button_pressed():
@@ -40,7 +51,6 @@ func _on_Back_Button_pressed():
 # helper functions
 func get_selected_song():
 	var items = $VBoxContainer/HBoxContainer/Songs.get_children()
-	var count = 0
 	for i in items:
 		if i.pressed:
 			return songs[i]

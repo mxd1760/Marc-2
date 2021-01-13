@@ -20,6 +20,22 @@ Project Goals:
 Project Updates:
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+Date: 01/09/2020
+
+Done:  	Marcus: - i added song stuff
+	Mark.S: - Improvements to level generator algorithm
+		- Scope outline
+	Mark.M: - Practiced sprite animations
+		- Transfered to new computer
+Doing:  Marcus: - Look into Multiplayer
+		- Look into tech for special events (Bosses, enemies, level hazards)
+		- Look into creating a level editor
+		- Look into developing an options menu
+	Mark.S: - Couple the level generator to the game now that we have a level select
+	Mark.M: - Make basic assets, character walk, platforms.
+Goals: Get levels working and start on tech for a campaign
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 Date: 01/03/2020
 
 Done:	Marcus: - I fixed a couple of bugs and added a new menu
