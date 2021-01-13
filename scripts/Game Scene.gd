@@ -6,13 +6,15 @@ extends Node2D
 # var b = "text"
 export (PackedScene) var GAME_OVER_MENU
 export (PackedScene) var PAUSE_MENU
-var DEMO_PARENT =  "Title Screen"
-var PAUSE_MUFFLE = 10 #db so is a relative adjustment
-var UNPAUSE_TIME = 3
+const DEMO_PARENT =  "Title Screen"
+const PAUSE_MUFFLE = 10 #db so is a relative adjustment
+const UNPAUSE_TIME = 3
+const COUNTDOWN_WAIT_TIME = 0.6
 
 var paused = false
 var demo = false
 var paused_playback_position
+var countdown
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,6 +24,7 @@ func _ready():
 		demo = false
 	set_pause(false)
 	$Player.demo = demo
+	$Countdown.text = ""
 	pass # Replace with function body.
 
 
@@ -63,16 +66,27 @@ func set_pause(value):
 		paused_playback_position = $"Level Music".get_playback_position()
 		$"Level Music".volume_db -= PAUSE_MUFFLE
 	elif paused == true && $Unpause.is_stopped():
-		run_unpause_countdown()
+		run_unpause_countdown(UNPAUSE_TIME)
 		$"Level Music".volume_db += PAUSE_MUFFLE
-		$"Level Music".play(paused_playback_position-UNPAUSE_TIME)
+		$"Level Music".play(paused_playback_position-(UNPAUSE_TIME*COUNTDOWN_WAIT_TIME))
 		
 
-func run_unpause_countdown():
+func run_unpause_countdown(count):
 	#this should do something graphical to show the game is about to resume
-	$Unpause.start(UNPAUSE_TIME)
+	countdown = count - 1
+	$Unpause.start(COUNTDOWN_WAIT_TIME)
+	if count == 0:
+		$Countdown.text = "GO!"
+	else:
+		$Countdown.text = str(count)
 
 func _on_Unpause_timeout():
-	paused = false
+	if countdown > 0:
+		run_unpause_countdown(countdown)
+	elif countdown <0:
+		$Countdown.text = ""
+	else:
+		run_unpause_countdown(countdown)
+		paused = false
 	pass # Replace with function body.
 

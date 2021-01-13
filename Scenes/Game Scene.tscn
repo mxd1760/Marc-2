@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Platform.tscn" type="PackedScene" id=2]
@@ -6,6 +6,13 @@
 [ext_resource path="res://scripts/Game Scene.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Pause Menu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Game Over Menu.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/fonts/BOOKOSB.TTF" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 10
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 7 )
 
 [node name="Game Scene" type="Node2D"]
 script = ExtResource( 4 )
@@ -46,6 +53,19 @@ position = Vector2( 4.77866, 9.04984 )
 
 [node name="Unpause" type="Timer" parent="."]
 one_shot = true
+
+[node name="Countdown" type="Label" parent="."]
+margin_left = 28.541
+margin_top = 35.6763
+margin_right = 346.541
+margin_bottom = 218.676
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0901961, 0.427451, 0.0470588, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="timeout" from="Platforms" to="Platforms" method="_on_Platforms_timeout"]
 [connection signal="Game_Over" from="Player" to="." method="_on_Player_Game_Over"]
 [connection signal="timeout" from="Unpause" to="." method="_on_Unpause_timeout"]
