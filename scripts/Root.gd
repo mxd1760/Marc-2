@@ -4,9 +4,20 @@ const GAME_SCENE = preload("res://Scenes//Game Scene.tscn")
 const MAIN_MENU = preload("res://Scenes//Title Screen.tscn")
 const SONG_SELECT = preload("res://Scenes//Song Select.tscn")
 const OPTIONS = preload("res://Scenes//Options.tscn")
-
 const DEFAULT_SONG = "res://assets/songs/Test Song 2- Overworld.wav"
 
+const SETTINGS = "res://resources//settings.tres"
+
+
+
+
+func _ready():
+	var res = load(SETTINGS)
+	var bus = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_volume_db(bus,res.master_volume)
+	bus = AudioServer.get_bus_index("Music")
+	AudioServer.set_bus_volume_db(bus,res.music_volume)
+	pass
 
 
 
@@ -36,3 +47,8 @@ func Load_Options():
 	for i in get_children():
 		i.queue_free()
 	add_child(OPTIONS.instance())
+	
+func Quit():
+	for i in get_children():
+		i.queue_free()
+	get_tree().quit()

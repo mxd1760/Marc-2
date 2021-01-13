@@ -59,5 +59,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "Back To Title"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = "Music"
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/Play Button" to="." method="_on_Play_Button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/Back Button" to="." method="_on_Back_Button_pressed"]

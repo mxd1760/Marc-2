@@ -14,5 +14,5 @@ func _on_Back_Button_pressed():
 
 
 func _on_Quit_Button_pressed():
-	get_tree().quit()
+	get_tree().call_group("Loader","Quit")
 	pass # Replace with function body.

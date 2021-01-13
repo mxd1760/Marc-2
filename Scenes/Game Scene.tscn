@@ -50,6 +50,7 @@ light_mask = 16
 position = Vector2( 4.77866, 9.04984 )
 
 [node name="Level Music" type="AudioStreamPlayer" parent="."]
+bus = "Music"
 
 [node name="Unpause" type="Timer" parent="."]
 one_shot = true

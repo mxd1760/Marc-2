@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://scripts/settings.gd" type="Script" id=1]
+
+[resource]
+resource_name = "settings"
+script = ExtResource( 1 )
+master_volume = -5.67993
+music_volume = -4.58296
