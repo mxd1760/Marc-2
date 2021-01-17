@@ -1,11 +1,11 @@
 extends Node
 
-const GAME_SCENE = preload("res://Scenes//Game Scene.tscn")
-const MAIN_MENU = preload("res://Scenes//Title Screen.tscn")
-const SONG_SELECT = preload("res://Scenes//Song Select.tscn")
-const OPTIONS = preload("res://Scenes//Options.tscn")
-const DEFAULT_SONG = "res://assets/songs/Test Song 2- Overworld.wav"
+export (PackedScene) var GAME_SCENE
+export (PackedScene) var MAIN_MENU
+export (PackedScene) var SONG_SELECT
+export (PackedScene) var OPTIONS
 
+const DEFAULT_SONG = "res://assets/songs/Test Song 2- Overworld.wav"
 const SETTINGS = "res://resources//settings.tres"
 
 

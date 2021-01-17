@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/fonts/BOOKOS.TTF" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/fonts/Options entry.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/songs/Test Song 1- Stereo Madness.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/fonts/BOOKOS.TTF" type="DynamicFontData" id=2]
 [ext_resource path="res://scripts/Options.gd" type="Script" id=3]
-[ext_resource path="res://assets/songs/Test Song 1- Stereo Madness.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/fonts/Options entry.tres" type="DynamicFont" id=4]
 [ext_resource path="res://assets/fonts/Menu Button.tres" type="DynamicFont" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [node name="Options" type="MarginContainer"]
 anchor_top = -0.00176575
@@ -49,7 +49,7 @@ custom_constants/separation = 20
 [node name="Label" type="Label" parent="VSplitContainer/MasterVolume"]
 margin_right = 147.0
 margin_bottom = 24.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 text = "Master Volume"
 align = 2
 percent_visible = -0.0833333
@@ -97,7 +97,7 @@ custom_constants/separation = 29
 [node name="Label" type="Label" parent="VSplitContainer/MusicVolume"]
 margin_right = 138.0
 margin_bottom = 24.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 4 )
 text = "Music Volume"
 align = 2
 
@@ -157,7 +157,7 @@ text = "Back to Title"
 align = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 1 )
 autoplay = true
 bus = "Music"
 [connection signal="value_changed" from="VSplitContainer/MasterVolume/HBoxContainer/MasterVolumeSlider" to="." method="_on_MasterVolumeSlider_value_changed"]

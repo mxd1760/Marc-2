@@ -119,7 +119,7 @@ func _physics_process(delta):
 			move_vector.y = VEL_TERMINAL
 		elif move_vector.y < -VEL_TERMINAL:
 			move_vector.y = -VEL_TERMINAL
-		$Body.move_and_slide(move_vector,UP)
+		move_vector = $Body.move_and_slide(move_vector,UP)
 		$Grapple.move_and_slide(grapple_vector)
 		
 		# Check if off screen
