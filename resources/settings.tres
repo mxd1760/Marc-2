@@ -5,5 +5,5 @@
 [resource]
 resource_name = "settings"
 script = ExtResource( 1 )
-master_volume = -5.67993
+master_volume = -11.7005
 music_volume = -4.58296

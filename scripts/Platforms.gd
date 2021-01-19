@@ -5,9 +5,7 @@ export (PackedScene) var Platform
 
 var phys_paused = false
 
-var PLATFORM_SPEED = 700
 var PLATFORM_SPAWN_X = 1500
-var PLATFORM_DESPAWN_X = -500
 var PLATFORM_SPAWN_Y_MAX = 500
 var PLATFORM_SPAWN_Y_MIN = 400
 var USE_PROGRAM_WAIT_TIME = true
@@ -33,12 +31,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	set_paused(phys_paused)
-	if not paused:
-		# manage existing platforms
-		for i in $Plats.get_children():
-			i.position.x -= PLATFORM_SPEED*delta
-			if i.position.x < PLATFORM_DESPAWN_X:
-				i.queue_free()
+	$Plats.paused = phys_paused
 		
 
 
